@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <style>
+        
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box; 
+        }
+        body{
+            background: #333;
+            color: #fff;
+            font-weight: 300;
+        }
+        .load{
+            position: fixed;
+            background: #000;
+            width: 100%;
+            height: 100svh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: c .5s 2.3s forwards;
+        }
+        
+        .text{
+            borderr: 1px solid black;
+            animation: b 3s forwards;
+            overflow: hidden;
+            color: #fff;
+            position: relative;
+        }
+        
+        .text::before{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: -100%;
+            width: 100%;
+            height: 1px;
+            background: #fff;
+            animation: d 1s 1.3s;
+        }
+        
+        .text span{
+            font-size: 2rem;
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(100%);
+            animation: a .7s forwards;
+        }
+        
+        .text span:nth-child(1){
+            animation-delay: .2s;
+        }
+        .text span:nth-child(2){
+            animation-delay: .3s;
+        }
+        .text span:nth-child(3){
+            animation-delay: .4s;
+        }
+        .text span:nth-child(4){
+            animation-delay: .5s;
+        }
+        .text span:nth-child(5){
+            animation-delay: .6s;
+        }
+        .text span:nth-child(6){
+            animation-delay: .7s;
+        }
+        .text span:nth-child(7){
+            animation-delay: .8s;
+        }
+        .text span:nth-child(8){
+            animation-delay: .9s;
+        }
+        
+        @keyframes a{
+            to{ 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes b{
+            0%{
+                opacity: 0;
+                transform: scale(1.1);
+            }
+            70%{
+                opacity: 1;
+                transform: scale(0.8);                
+            }
+            100%{
+                opacity: 0;
+                transform: scale(0.7);
+            }
+        }
+        @keyframes c{
+            to{ 
+                opacity: 0;
+                display: none;
+            }
+        }
+        @keyframes d{
+            to{ 
+                left: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="load">
+        <div class="text">
+            <span>T</span>
+            <span>E</span>
+            <span>E</span>
+            <span>R</span>
+            <span>A</span>
+            <span>P</span>
+            <span>A</span>
+            <span>T</span>
+        </div>
+    </div>
+    
+    <h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Voluptates, deserunt. Nostrum distinctio quam asperiores 
+        nisi vel inventore cumque tempora amet voluptatem veniam 
+        sapiente dignissimos et quibusdam voluptatibus velit, dolore, ad reiciendis, 
+        tenetur aspernatur natus earum! Voluptatibus doloremque   
+        voluptatum possimus illo amet temporibus alias aliquam quod, maxime recusandae beatae officia non!
+    </h1>
+    
+</body>
+</html>
